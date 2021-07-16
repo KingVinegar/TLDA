@@ -1,0 +1,124 @@
+/*
+Read the readme file for details on the most important changes.
+
+v2.04 - v2.05 - 2.06
+Dark skin update
+Fixed minor issues
+
+v2.03
+Improved Meter.
+	Values will update according to the changes you will make to camera and floor without the need to measure again.
+Added [tab Objects] "Auto position".
+	To be used with sprites of the same size as the background image. This mode allows to place sprites in seconds with just a click. 
+Fixed minor issues.
+Updated manual.
+
+v2.02
+Added Tilemap support.
+Added [tab Navigation] "Show line degrees":
+	Ability to see line angle in two ways, on 360° and every 90° useful for quickly finding angles such as 30/45/60.
+	It can show a summary label (resizable) near the mouse or fixed at the top.
+Added [tab Navigation] "Keep line straight":
+	Ability to draw vertical or horizontal straight lines. This option can only be used with Tilemap or environments set in orthographic projection.
+	Mouse distance from the line can be changed.
+Added [General options] "Draw wire spot":
+	Useful when there are many areas and their labels remain hidden behind spots. This mode can also be used throughout areas construction process.
+Update manual.
+
+v2.01
+Added [tab 2.5DTK Env.]: new controls for cube management that make it easier to find right FOV and camera rotation from a 2D image.
+Improved character scaling script: character slows down as it moves away from the camera.
+Fixed minor issues.
+Updated manual.
+
+v2.0
+Relevant changes since version 1.05
+•	It is no longer required to enter Play Mode to create areas and place objects. Now whole process can be done directly in Edit Mode. This new feature will speed up work and allow to use zoom tool of Game View to better place objects.
+•	Whether you work in Orthographic or Perspective projection the right camera  size or distance will be kept (this function can be disabled). This way your sprites clipped from the background image won't need to be resized.
+•	Each area can be deleted and converted from walkable to non-walkable and vice versa. Vertices can be moved, added, deleted  both while you are drawing and once area has been closed. 
+•	You can choose to work with a Plane as floor or use 2.5D Toolkit tool that doesn't require it. This tool cannot manage multilevel environments, if your scene requires floors at different heights you have to work with plans.
+•	If you work in Orthographic projection you can take advantage of the new tool to resize character to get an even more accurate overview of your  scene.
+•	With the new and powerful Meter and Cube tools you can now set your environment even more realistic.
+•	Scene building always takes place starting from the coordinate (0, 0, 0). Once work is complete, you can move whole environment wherever you want.
+•	... and many other options that will make your job more enjoyable.
+
+v1.05
+Changed [tab Navigation] "Type":
+	Ability to change the type of area to be drawn.
+	Now you can draw more distinct walkable areas, useful e.g. if you want to build platforms and make your character jump from one to the other.
+	Non-walkable areas must always be contained within any walkable area.
+	Watch the explanatory "2.5D Toolkit: create multiple walkable areas"; video: https://youtu.be/W3-PhGsrvQQ
+	DUE TO THIS IMPROVEMENT IT IS NEEDED TO MODIFY THE AREAS FILES CREATED WITH PREVIOUS VERSIONS.
+	PLEASE READ THE README FILE.
+Improved code and Editor.
+
+v1.04
+Added [tab Objects] "Hide object" (as requested):
+	You can hide / show the 2D or 3D object.
+	Especially useful with 2D objects to ensure that they are perfectly overlapped to the background image from which they 
+	were cut out. Check and uncheck several times looking at the image carefully. If there are no differences the sprite size is correct.
+Added [tab Navigation] "Draw in scene view":
+	By enabling this option you will be able to draw directly in Scene View.
+	This selection is very important. It may happen that you have to draw areas, whether they are walkable or not, that are not visible
+	in Game View due to camera settings. 
+	To move from Game View to Scene View and vice versa click the right mouse button to hide the line and click it again to grab the line 
+	when you are in the other scenario.
+	You can check this eventuality: "2.5D Toolkit: how and why to use more meshes in one scene"; video: https://youtu.be/Q6HakB3uk-M
+Added [tab Navigation] "Save as":
+	Now you can name the mesh to save. By default it will be "(name scene)Mesh".
+	This is needed when you want to create more meshes in the same scene.
+Added [tab Navigation] "Don't destroy on save": 
+	This option is used in conjunction with "Save as".
+	Normally when you save the mesh it will be removed from the Hierarchy. Checking this box the mesh will not be deleted.
+	By keeping the mesh in the scene you can use it as a reference to design another area.
+	Watch the explanatory "2.5D Toolkit: how and why to use more meshes in one scene"; video: https://youtu.be/Q6HakB3uk-M
+Added [tab Objects] "True obj scale"
+	Non-editable field showing the real scale of the object in Perspective Projection.
+	If <Do not keep proportions> is not enabled, when you move or resize an object in Projection Perspective it keeps its proportions. 
+	These are the values shown in the <Scale> fields.
+	This non-editable field will display the actual scale of the object as shown in the Inspector.
+	It is visible only in Perspective Projection.
+Fixed: in Orthographic Projection objects were not scaled correctly.
+Improved code and Editor.
+Updated manual.
+
+v1.03
+Added [tab Object] "Unity behavior" (as requested):
+	Selecting this option will result in the same behavior as the Unity controls in the Inspector. 
+	<More accuracy> and <Lock scale> will be disabled and it will be possible to directly enter the new value in the fields.
+Fixed: old Unity versions raise warning if the Main Camera and Floor fields are empty.
+Fixed: old Unity versions raise warning if they do not support the Background Camera.
+Fixed: sometimes old Unity versions raise warning while working in Scene View.
+Updated manual.
+
+v1.02
+Added [tab Settings] "Create background camera": 
+	Note: only for Unity 2018.3.0 or higher
+	Choosing this option you will no longer have to rotate the background image following the camera settings and
+	you will be free to build your environment without caring to keep it in front of the background.
+Removed [tab Object] "Assign ideal size";
+Added [tab Object] "Don't keep proportions":
+	In the PERSPECTIVE projection the initial proportions of the object will depend on the settings of the camera.
+	Use "Lock scale" to resize it.
+	If you resize the object it will maintain the proportions even moving it on the Z axis.
+	By selecting "Don't keep proportions", the object will change size according to the distance from the camera.
+	In the ORTHOGRAPHIC projection "Don't keep proportions" will not be enabled.
+	If you work with the background image in the scene, keep it in position 0, 0, 0 and the proportions of the sprite
+	will be the correct ones. If you cut off part of the background image, simply place the sprite without having to resize it.
+	If you work with the Background camera in Orthogonal Projection, to have correct sprites proportions place the background image 
+	in Scene View and set the Main Camera Size accurately overlaying the two images. Then you can delete the image.
+	This way all your sprites won't need to be resized.
+	Watch the explanatory '2.5D Toolkit: new Background Camera'video: https://www.youtube.com/watch?v=zhmSUqyHCXw
+	or take a look at the manual in the dedicated section.
+	Off course you can ignore these steps and resize all the sprites in Game View.
+Improved scene file to export:
+	Now all camera data will be saved.
+Added Gift folder:
+	Note: only for Unity 2018.3.0 or higher
+	It contains a nice Broken Sword style bubble that you can customize and use in your games.
+
+v1.01
+Added orthogonal camera management.
+Added [tab Object] "More accuracy" option to improve objects placement.
+Fixed: scene file could not be saved outside the Assets folder.
+*/

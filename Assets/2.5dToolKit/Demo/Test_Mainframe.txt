@@ -1,0 +1,7 @@
+/*
+It uses 2.5D Toolkit environment tool which requires Background Camera.
+
+Please set Game View > Aspect Ratio to 1480:800.
+
+Projection is Perspective, Camera distance is set as automatic, Character walk: 1.7, Character run: 3.85.
+*/

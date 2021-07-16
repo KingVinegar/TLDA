@@ -1,0 +1,7 @@
+/*
+It does not use any 2.5D Toolkit tools. Background image is in scene, four Plans were used to create walkable area
+
+Please set Game View > Aspect Ratio to 4200: 2800.
+
+Projection is Perspective, Camera distance is free, Character walk: 1.8, Character run: 3.3 (Animator Controller).
+*/

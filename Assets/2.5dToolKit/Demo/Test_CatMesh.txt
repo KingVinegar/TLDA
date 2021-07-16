@@ -1,0 +1,5 @@
+/*
+It does not use any 2.5D Toolkit tools.
+
+Please set Game View > Aspect Ratio to 1000:1000.
+*/
