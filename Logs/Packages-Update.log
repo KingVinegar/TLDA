@@ -62,3 +62,11 @@ Update Mode: updateDependencies
 The following packages were updated:
   com.unity.ide.visualstudio from version 2.0.8 to 2.0.9
   com.unity.test-framework from version 1.1.24 to 1.1.26
+
+=== Fri Jul 16 20:22:21 2021
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.test-framework from version 1.1.26 to 1.1.27
